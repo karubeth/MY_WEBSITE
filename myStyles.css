@@ -6,7 +6,7 @@ body {
   .header {
     padding: 80px;
     text-align: center;
-    background-color: #1abc9c;
+    background-color: red;
     color: white;
     font-size: 40px;
   }
