@@ -31,22 +31,51 @@
       padding: 10px;
       box-shadow: 0px 0px 10px #888;
     }
+    
+    /* Rearrange the content on small screens */
+    @media only screen and (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      img {
+        margin-bottom: 20px;
+      }
+    }
+    
+    /* Horizontally align and vertically center the "Outing" text */
+    .right-middle {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .right-middle p {
+      margin-right: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="hobby">
+      <p>Spending time at the beach</p>
+      <img src="images/beach.jpeg" alt="Beach" height="200" width="300">
+    </div>
+
+    <div class="hobby">
+      <p>Reading</p>
+      <img src="images/background.jpeg" alt="Background" height="200" width="300">
+    </div>
+
+    <div class="right-middle">
+      <p>Outing</p>
+      <img src="images/Eating.jpeg" alt="Eating" height="300" width="400">
+    </div>
+    
     <h2>My hobbies are;</h2>
-
-    <p>Spending time at the beach</p>
-    <img src="images/beach.jpeg" alt="Beach" height="200" width="300">
-
-    <p>Reading</p>
-    <img src="images/background.jpeg" alt="Background" height="200" width="300">
-
-    <p>Outing</p>
-    <img src="images/Eating.jpeg" alt="Eating" height="300" width="400">
   </div>
 </body>
 </html>
-
 
