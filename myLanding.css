@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -24,26 +25,63 @@
   color: #444;
 }
 
-.panel1 {
-  background-image: url("education.jpg");
-  background-size: cover;
-  background-position: center;
+.bio-panel {
+  flex-basis: 50%;
+  height: 40vh;
+  padding: 20px;
 }
 
-.panel2 {
-  background-image: url("hobbies.jpg");
-  background-size: cover;
-  background-position: center;
+.bio-panel p {
+  margin-top: 1em;
 }
 
-.panel3 {
-  background-image: url("contact.jpg");
-  background-size: cover;
-  background-position: center;
+.photo-panel {
+  flex-basis: 20%;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.photo-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.education-panel {
+  order: 2;
+}
+
+.hobbies-panel {
+  order: 3;
+}
+
+.contact-panel {
+  order: 5;
 }
 
 @media only screen and (max-width: 600px) {
   .panel {
     flex-basis: calc(50% - 20px);
+  }
+  
+  .bio-panel, .photo-panel {
+    flex-basis: 100%;
+    height: auto;
+  }
+  
+  .education-panel, .hobbies-panel, .contact-panel {
+    flex-basis: 50%;
+  }
+  
+  .education-panel {
+    order: 3;
+  }
+  
+  .hobbies-panel {
+    order: 4;
+  }
+  
+  .contact-panel {
+    order: 5;
   }
 }
