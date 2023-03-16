@@ -7,54 +7,52 @@ body {
 	margin: 0;
 }
 
-.grid-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	grid-gap: 20px;
-	padding: 20px;
+.container {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.panel {
-	background-color: #eee;
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: 100%;
+}
+
+.col {
+	flex-basis: 33.33%;
 	padding: 20px;
 	transition: background-color 0.5s ease;
 }
 
-.panel:hover {
+.col:hover {
 	background-color: #ccc;
 }
 
-.panel h2 {
+.col h2 {
 	margin-top: 0;
 }
 
-.panel img {
+.col img {
 	max-width: 100%;
 	height: auto;
 }
 
 .bio {
-	grid-column: 1;
-	grid-row: 1;
+	order: 1;
 }
 
 .education {
-	grid-column: 2;
-	grid-row: 2;
+	order: 2;
 }
 
 .photo {
-	grid-column: 3;
-	grid-row: 1;
+	order: 3;
 }
 
 .hobbies {
-	grid-column: 1;
-	grid-row: 3;
+	order: 4;
 }
 
 .contact {
-	grid-column: 3;
-	grid-row: 3;
+	order: 5;
 }
