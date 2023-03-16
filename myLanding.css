@@ -10,49 +10,50 @@ body {
 .container {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
-.row {
-	display: flex;
-	flex-wrap: wrap;
-	flex-basis: 100%;
-}
-
-.col {
-	flex-basis: 33.33%;
+.box {
+	flex-basis: calc(33.33% - 20px);
+	margin-bottom: 20px;
 	padding: 20px;
+	background-color: #f1f1f1;
 	transition: background-color 0.5s ease;
 }
 
-.col:hover {
+.box:hover {
 	background-color: #ccc;
 }
 
-.col h2 {
+.box h2 {
 	margin-top: 0;
 }
 
-.col img {
+.box img {
 	max-width: 100%;
 	height: auto;
 }
 
-.bio {
-	order: 1;
+.bio, .hobbies, .contact {
+	flex-basis: calc(33.33% - 40px);
 }
 
 .education {
-	order: 2;
+	flex-basis: calc(66.66% - 40px);
 }
 
 .photo {
-	order: 3;
+	flex-basis: calc(33.33% - 20px);
+	height: 0;
+	padding-bottom: 100%;
+	position: relative;
+	overflow: hidden;
 }
 
-.hobbies {
-	order: 4;
-}
-
-.contact {
-	order: 5;
+.photo img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
