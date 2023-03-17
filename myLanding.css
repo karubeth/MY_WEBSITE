@@ -5,12 +5,15 @@
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
+	background-color: antiquewhite;
 }
 
 .container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: stretch;
+	height: 100vh;
 }
 
 .box {
@@ -34,26 +37,81 @@ body {
 	height: auto;
 }
 
-.bio, .hobbies, .contact {
-	flex-basis: calc(33.33% - 40px);
+.bio{
+	flex-basis: calc(33.33% - 20px);
+	height: calc(100% / 3);
+    background-color:rgb(165, 164, 164);
+} 
+.photo{
+	flex-basis: calc(33.33% - 20px);
+	height: calc(100% / 3);
+	background-color: rgb(35, 13, 236);	
+} 
+.education{
+	flex-basis: calc(33.33% - 20px);
+	height: calc(100% / 3);
+	background-color:rgb(137, 137, 165);
+}
+ .hobbies{
+	flex-basis: calc(33.33% - 20px);
+	height: calc(100% / 3);
+	background-color: rgb(129, 129, 214);
+ } 
+ .contact {
+	flex-basis: calc(33.33% - 20px);
+	height: calc(100% / 3);
+	background-color: rgb(214, 133, 133);
 }
 
-.education {
-	flex-basis: calc(66.66% - 40px);
-}
-
-.photo {
+.empty {
 	flex-basis: calc(33.33% - 20px);
 	height: 0;
-	padding-bottom: 100%;
-	position: relative;
-	overflow: hidden;
+}
+.empty:first-child,
+.empty:nth-child(3),
+.empty:nth-child(7),
+.empty:last-child {
+	display: none;
 }
 
-.photo img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
